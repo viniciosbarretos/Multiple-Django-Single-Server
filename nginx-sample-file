@@ -1,0 +1,19 @@
+##
+# Nginx sample file
+# Change everything with {*} for your own values
+##
+
+server {
+    listen 80;
+    server_name {project1.com};
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root {/home/user/project1};
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:{/home/user/project1/project1}.sock;
+    }
+}
