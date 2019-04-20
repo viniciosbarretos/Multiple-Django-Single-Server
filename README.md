@@ -94,7 +94,7 @@ Paste the following code changing everything inside {} for your own values:
 ```
 server {
     listen 80;
-    server_name server_domain_or_IP;
+    server_name {project1.com};
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {
@@ -112,4 +112,9 @@ Now, you need to enable server block and restart Nginx:
 ```
 sudo ln -s /etc/nginx/sites-available/project1.com /etc/nginx/sites-enabled
 sudo systemctl restart nginx
+```
+
+If you have any issue, check if nginx settings are ok:
+```
+nginx -t
 ```
