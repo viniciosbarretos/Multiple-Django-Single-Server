@@ -1,5 +1,5 @@
 # Multiple-Django-Single-Server
-Learn how to deal with multiple Django services in a single server
+Learn how to deal with multiple Django services in a single server using Nginx and Gunicorn.
 
 ### Requirements
 - Python
@@ -70,7 +70,7 @@ sudo systemctl status project1.gunicorn.socket
 sudo systemctl status gunicorn
 ```
 
-If you got any problem, use the following commands check logs
+If you got any problem, use the following commands to check logs:
 ```
 sudo journalctl -u gunicorn
 ```
