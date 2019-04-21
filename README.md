@@ -118,3 +118,6 @@ If you have any issue, check if nginx settings are ok:
 ```
 nginx -t
 ```
+
+### 5. Repeat Steps
+Now, all you need is replicate previous steps to other django installations.
